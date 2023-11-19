@@ -36,9 +36,9 @@ let guardar = document
     //ocultar pantalla de carga
     cargaProducto.hide();
 
-    //Guarda item en LocalStorage
-    listadoStorage.push(modelo);
-    localStorage.setItem("listaCompras", listadoStorage);
+    // //Guarda item en LocalStorage
+    // listadoStorage.push(modelo);
+    // localStorage.setItem("listaCompras", listadoStorage);
   });
 
 // if (localStorage.getItem("listaCompras")) {
