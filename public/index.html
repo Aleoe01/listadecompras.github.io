@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link rel="icon" href="images/smartphone.svg">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <!--Meta Data Google-->
+    <meta name="description" content="Lista de compras" />
+    <meta name="keywords" content="lista, compras, app, supermercado, productos, categoria" />
+    <meta name="author" content="Alejandro Ojeda" />
+    <meta name="copyright" content="summerhack 2021"/>
+    <!--ROBOTS-->
+    <meta name="robots" content="index"/>
+    <meta name="robots" content="follow"/>
+    <!--OG Facebook-->
+    <meta property="og:title" content="Creá tu lista de compras de manera práctica y sencilla ACÁ">
+    <meta property="og:image" content="images/carrito-supermercado.jpg">
+    <meta property="og:url" content="https://desafio3listadecompras.web.app/">
+    <!--twitter-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Creá tu lista de compras de manera práctica y sencilla ACÁ">
+    <meta name="twitter:image" content="images/carrito-supermercado.jpg">
+    <meta name="twitter: creator" content="@AleOjeda01">
+
+<body>
+
+    <header>
+        <nav>
+			<img src="images/carrito-lindo.svg" alt=""><p>Lista de compras</p>
+		</nav>
+    </header>
+
+    <section id="pantallaVacia">
+        <h1 class="pantallaVacia__titulo">No hay productos en la lista</h1>
+        <img class="pantallaVacia__icono" src="images/coffee-cup.svg" alt="">
+    </section>
+
+    <section id="pantallaListado">
+
+        <ul class="list-group" id="pantallaListadoLista">
+            
+        </ul>
+
+    </section>
+
+    <section id="pantallaDetalle">
+        <img src="images/carne.svg" alt="" class="pantallaDetalle__logo" id="pantallaDetalleLogo">
+        <h1 class="pantallaDetalle__titulo" id="pantallaDetalleTitulo"><strong>Producto</strong></h1>
+        <p class="pantallaDetalle__descripcion" id="pantallaDetalleDescripcion">descripcion</p>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="pantallaDetalleCerrar">Cerrar</button>
+    </section>
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cargaProducto" id="botonAdd">
+        <p>+</p>
+    </button> 
+    <!-- Modal -->
+    <div class="modal fade" id="cargaProducto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Agregar a la lista</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="cargaProductoNombre" class="form-label"><strong>Ingrese producto</strong></label>
+                    <input type="Text" class="form-control" id="cargaProductoNombre" placeholder="Carne/Leche" aria-label="default input example">
+                </div>
+
+                <div class="mb-3">
+                    <label for="cargaProductoCategoria" class="form-label"><strong>Seleccione una categoria</strong></label>
+                    <select id="cargaProductoCategoria" class="form-select">
+                        <option value="images/bolsa-de-la-compra.svg">Varios</option>
+                        <option value="images/carne.svg">Carnes</option>
+                        <option value="images/leche.svg">Lacteos</option>
+                        <option value="images/vegetal.svg">Vegetales</option>
+                        <option value="images/spaguetti.svg">Pasta/Arroz</option>
+                        <option value="images/frutas.svg">Frutas</option>
+                        <option value="images/juice.svg">Bebidas</option>
+                        <option value="images/snacks.svg">Snacks</option>
+                        <option value="images/limpieza.svg">Limpieza</option>
+                        <option value="images/bano.svg">Aseo personal</option>
+                        <option value="images/mascotas.svg">Mascota</option>
+                        
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="cargaProductoDescripcion" class="form-label"><strong>Descripcion del producto</strong></label>
+                    <textarea class="form-control" id="cargaProductoDescripcion" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="pantallaCargaAdd">Agregar producto</button>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
